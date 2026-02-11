@@ -21,6 +21,7 @@ def main():
     conn = connect_to_device('192.168.1.1', 'admin', 'password')
     info = get_device_info(conn)
     print(info)
+    print("Device information retrieved successfully.")
     conn.disconnect()
 
 if __name__ == "__main__":
