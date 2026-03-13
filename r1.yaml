@@ -1,0 +1,24 @@
+---
+routers:
+  hostname: R1
+  interfaces:
+    - id: 0
+      ip: 192.1681.254
+      mask: 255.255.255.0
+      enabled: true
+      name: GigabitEthernet0/0
+
+    - id: 1
+      ip: 172.2.2.2
+      mask: 255.255.255.0
+      enabled: true
+      name: GigabitEthernet0/1
+  routing:
+    - routes:
+        - destination: 10.1.1.0
+          maks: 255.255.255.0
+          gateway: 192.168.1.1
+        - destination: 10.2.2.0
+          mask: 255.255.255.0
+          gateway: 172.2.2.2
+        
